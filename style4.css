@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; /* A more modern font choice */
+  font-family: 'Poppins', sans-serif;
 }
 html{
   scroll-behavior: smooth;
@@ -31,12 +31,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* ADDED: Helps prevent layout issues */
+  flex-wrap: wrap;
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: rgba(8, 8, 8, 0.7); /* ADDED: Slight background for better readability */
+  background-color: rgba(8, 8, 8, 0.7);
 }
 
 .logo {
@@ -48,7 +48,7 @@ nav {
 
 nav ul li {
   list-style: none;
-  display: inline-block; /* Changed from flex for simplicity */
+  display: inline-block;
   margin: 10px 20px;
 }
 
@@ -377,11 +377,10 @@ form .btn2{
   display: block;
 }
 
-/* --------- CSS For Small Screens (Mobile View) ---------- */
+/* --------- (Mobile View) ---------- */
 
-/* REMOVED: Redundant rules from here, moved into the media query */
 nav .fas {
-  display: none; /* HIDE icons by default */
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -392,23 +391,24 @@ nav .fas {
   .header-text h1{
       font-size: 30px;
   }
+  #header {
+    background-image: url("imag.jpg");
+  }
 
-  /* FIX: Show hamburger icon and hide nav links */
   nav .fas {
-    display: block; /* SHOW icons on mobile */
+    display: block;
     font-size: 25px;
   }
   nav ul {
     background: #ff004f;
     position: fixed;
     top: 0;
-    right: -200px; /* Start off-screen */
+    right: -200px;
     width: 200px;
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
     transition: right 0.5s;
-    /* FIX: Stack menu items vertically */
     display: flex;
     flex-direction: column;
   }
@@ -422,8 +422,6 @@ nav .fas {
     left: 25px;
     cursor: pointer;
   }
-
-  /* FIX: Corrected selector to target both columns */
   .about-col-1, .about-col-2 {
     flex-basis: 100%;
   }
